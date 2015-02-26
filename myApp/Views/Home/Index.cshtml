@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2> @ViewData["Name"]  </h2>
+<ul>
+    @foreach (var cnt in ViewBag.country) { 
+    <li>@cnt</li>
+    }
+</ul>

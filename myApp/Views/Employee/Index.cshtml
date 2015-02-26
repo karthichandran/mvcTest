@@ -1,0 +1,15 @@
+﻿@using myApp.Models
+@model IEnumerable<myApp.Models.Employee>
+
+@{
+    ViewBag.Title = "Employee";
+}
+
+<h2>Employee</h2>
+<table>
+    <tr><th>Name</th><th>DeptID</th><th>Salary</th><th>Action</th></tr>
+    @foreach (Employee emp in @Model)
+    {
+    <tr><td>@emp.Ename</td><td>@emp.depID</td><td>@emp.salary</td><td>@Html.ActionLink(emp.Ename, "Details", new { id = emp.Eid })</td></tr>
+    }
+</table>

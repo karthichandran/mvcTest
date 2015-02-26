@@ -1,0 +1,16 @@
+﻿@using myApp.Models
+@model myApp.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<table>
+    
+    <tr><td> Name :</td><td>@Html.TextBoxFor(Model=>Model.Ename) </td></tr>
+     <tr><td> Dept :</td><td>@Html.TextBoxFor(Model=>Model.depID) </td></tr>
+     <tr><td> Salary :</td><td>@Html.TextBoxFor(Model=>Model.salary) </td></tr>
+</table>
+@Html.Action("Update","Details")
+@Html.ActionLink("Back to List", "Index") 
